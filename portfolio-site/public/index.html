@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Hugo 0.146.5">
+    <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+    <link rel="icon" href=/fav.png type="image/gif">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+
+    <link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+    <meta property="og:url" content="http://localhost:1313/">
+    <meta property="og:site_name" content="Hugo Profile">
+    <meta property="og:title" content="Hugo Profile">
+    <meta property="og:description" content="Text about my cool site">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hugo Profile">
+    <meta name="twitter:description" content="Text about my cool site">
+
+
+    <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="/css/header.css" media="all">
+    <link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+    <link rel="stylesheet" href="/css/theme.css" media="all">
+
+    <style>
+        :root {
+            --text-color: #290116;
+            --text-secondary-color: #8d4c47;
+            --text-link-color: #bf3e1a;
+            --background-color: #fef0ee;
+            --secondary-background-color: #64ffda1a;
+            --primary-color: #bf3e1a;
+            --secondary-color: #fdf6f3;
+
+
+            --text-color-dark: #e4e6eb;
+            --text-secondary-color-dark: #b0b3b8;
+            --text-link-color-dark: #ffffff;
+            --background-color-dark: #18191a;
+            --secondary-background-color-dark: #212529;
+            --primary-color-dark: #ffffff;
+            --secondary-color-dark: #212529;
+        }
+
+        body {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        html {
+            background-color: var(--background-color) !important;
+        }
+
+        body::-webkit-scrollbar {
+            height: 0px;
+            width: 8px;
+            background-color: var(--background-color);
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 1rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 1rem;
+            background: #b0b0b0;
+            outline: 1px solid var(--background-color);
+        }
+
+        #search-content::-webkit-scrollbar {
+            width: .5em;
+            height: .1em;
+            background-color: var(--background-color);
+        }
+    </style>
+
+
+
+    <meta name="description" content=Text&#32;about&#32;my&#32;cool&#32;site>
+    <link rel="stylesheet" href="/css/index.css" media="all">
+    <link rel="stylesheet" href="/css/projects.css" media="all">
+
+
+    <script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+
+
+
+    <title>
+        Liya Wang Space
+
+    </title>
+</head>
+
+<body class="light">
+
+
+    <script>
+        let localStorageValue = localStorage.getItem("pref-theme");
+        let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        switch (localStorageValue) {
+            case "dark":
+                document.body.classList.add('dark');
+                break;
+            case "light":
+                document.body.classList.remove('dark');
+                break;
+            default:
+                if (mediaQuery) {
+                    document.body.classList.add('dark');
+                }
+                break;
+        }
+    </script>
+
+
+    <script>
+        var prevScrollPos = window.pageYOffset;
+        window.addEventListener("scroll", function showHeaderOnScroll() {
+            let profileHeaderElem = document.getElementById("profileHeader");
+            let currentScrollPos = window.pageYOffset;
+            let resetHeaderStyle = false;
+            let showNavBarOnScrollUp = true;
+            let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+            if (showNavBar) {
+                profileHeaderElem.classList.add("showHeaderOnTop");
+            } else {
+                resetHeaderStyle = true;
+            }
+            if (currentScrollPos === 0) {
+                resetHeaderStyle = true;
+            }
+            if (resetHeaderStyle) {
+                profileHeaderElem.classList.remove("showHeaderOnTop");
+            }
+            prevScrollPos = currentScrollPos;
+        });
+    </script>
+
+
+
+    <header id="profileHeader">
+        <nav class="pt-3 navbar navbar-expand-lg animate">
+            <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+
+                <a class="navbar-brand primary-font text-wrap" href="/">
+
+                    <img src="/fav.png" width="30" height="30" class="d-inline-block align-top">
+                    LiYa W
+
+                </a>
+
+
+
+
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24"
+                        data-view-component="true">
+                        <path fill-rule="evenodd"
+                            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+                        </path>
+                    </svg>
+                </button>
+
+
+                <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                    <ul class="navbar-nav ms-auto text-center">
+
+                        <li class="nav-item navbar-text d-block d-md-none">
+
+                        </li>
+
+
+
+
+
+
+
+
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#projects" aria-label="projects">
+                                Projects
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#experience" aria-label="experience">
+                                About
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#contact" aria-label="contact">
+                                Contact
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/gallery" title="Blog posts">
+
+                                Gallery
+                            </a>
+                        </li>
+
+
+
+
+                        <li class="nav-item navbar-text">
+
+                            <div class="text-center">
+                                <button id="theme-toggle">
+                                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="content">
+        <section id="hero" class="py-5 align-middle">
+            <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
+                        <span class="subtitle">
+                            Hi, my name is
+                        </span>
+                        <h1>
+                            Liya.
+                        </h1>
+                        <h2>
+                            Full-stack developer
+                        </h2>
+                        <p class="hero-content">
+                            I use modern web technologies to build great apps that help people solve real problems and
+                            enjoy better digital experiences. Also a photographer.
+                        </p>
+                        <div class="row">
+                            <div class="col-auto h-100">
+
+                                <a href="/liyaW_resume.pdf" class="btn" download>Download Resume</a>
+
+
+                                </a>
+
+                            </div>
+                            <div class="col-auto px-0 h-100"><span>
+
+                                    <span class="px-1">
+                                        <a href="https://github.com/Liya66" target="_blank" class="btn social-icon">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </span>
+
+                                    <span class="px-1">
+                                        <a href="https://www.linkedin.com/in/liya-w-58bb24b9/" target="_blank"
+                                            class="btn social-icon">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </span>
+
+
+
+                                    <span class="px-1">
+                                        <a href="https://example.com" target="_blank" class="btn social-icon">
+                                            <img src="/fav.png">
+                                        </a>
+                                    </span>
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 d-none d-lg-block">
+                        <div class="row justify-content-center">
+                            <div class="col-12 pt-5 image animate px-0 text-center">
+                                <img src="/images/headshot.png" class="img-thumbnail mx-auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+
+
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h3 class="text-center">Projects</h3>
+                <div class="row justify-content-center px-3 px-md-5">
+
+                    <div class="col-lg-4 col-md-6 my-3">
+                        <div class="card my-3 h-100" title="PhotoApp">
+                            <div class="card-head">
+                                <img class="card-img-top" src="/images/projects/photoApp.jpg" alt="photoApp">
+                            </div>
+                            <div class="card-body bg-transparent p-3">
+                                <div class="pb-2 bg-transparent">
+
+                                    <span class="badge badge-secondary">react.js</span>
+
+                                    <span class="badge badge-secondary">express.js</span>
+
+                                    <span class="badge badge-secondary">node.js</span>
+                                    <span class="badge badge-secondary">MongoDB</span>
+
+                                </div>
+                                <h5 class="card-title bg-transparent mt-1">MERN PhotoApp</h5>
+                                <div class="card-text bg-transparent secondary-font">
+                                    A fullstack photo sharing&editing app with JWT Auth Cookie & Rest API. photos used
+                                    are all
+                                    from LiYa Photography.
+
+                                </div>
+                            </div>
+                            <div class="card-footer py-3">
+                                <div class="float-end d-flex align-items-center">
+                                    <a class="btn btn-sm me-3" href="https://github.com/Liya66/Mern-Photo-App"
+                                        target="_blank">
+                                        View
+                                    </a>
+                                    <a href="https://github.com/Liya66/Mern-Photo-App" target="_blank">
+                                        <i class="fab fa-github fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 my-3">
+                        <div class="card my-3 h-100" title="PhotoApp">
+                            <div class="card-head">
+                                <img class="card-img-top" src="/images/projects/iosApp.jpg" alt="photoApp">
+                            </div>
+                            <div class="card-body bg-transparent p-3">
+                                <div class="pb-2 bg-transparent">
+
+                                    <span class="badge badge-secondary">Swift</span>
+
+                                    <span class="badge badge-secondary">Firebase</span>
+
+                                    <span class="badge badge-secondary">Arkit</span>
+                                    <span class="badge badge-secondary">MapBox</span>
+
+                                </div>
+                                <h5 class="card-title bg-transparent mt-1">Glenroe-Ballyorgan Mobile App</h5>
+                                <div class="card-text bg-transparent secondary-font">
+                                    An AR and audio-based iOS app for interactive cultural presentation, featuring
+                                    Google authentication and database management. Developed in collaboration with
+                                    <a href="https://www.ballyhouradevelopment.com" target="_blank"
+                                        rel="noopener noreferrer">
+                                        Ballyhoura Development
+                                    </a>.
+                                </div>
+
+                            </div>
+                            <div class="card-footer py-3">
+                                <div class="float-end d-flex align-items-center">
+                                    <a class="btn btn-sm me-3"
+                                        href="/Users/liya/Desktop/Job applications/portfolio/portfolio-site/public/blogs/Ballyhoura/index.html"
+                                        target="_blank">
+                                        View
+                                    </a>
+                                    <a href="https://github.com/Liya66/Mern-Photo-App" target="_blank">
+                                        <i class="fab fa-github fa-2x"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 my-3">
+                        <div class="card my-3 h-100" title="Hugo Profile">
+                            <div class="card-head">
+                                <img class="card-img-top" src="/images/projects/profile.png" alt="Hugo Profile">
+                            </div>
+                            <div class="card-body bg-transparent p-3">
+                                <div class="pb-2 bg-transparent">
+
+                                    <span class="badge badge-secondary">Hugo</span>
+
+                                    <span class="badge badge-secondary">Bootstrap</span>
+
+                                    <span class="badge badge-secondary">Javascript</span>
+
+                                </div>
+                                <h5 class="card-title bg-transparent mt-1">Hugo Profile</h5>
+                                <div class="card-text bg-transparent secondary-font">
+                                    A highly customizable and mobile first Hugo template for personal portfolio and
+                                    blog.
+                                </div>
+                            </div>
+
+                            <div class="card-footer py-3">
+
+                                <span class="m-1 mx-2">
+                                    <a href="mailto:?subject=Hugo%20Profile%20Template&amp;body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f"
+                                        target="_blank">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </span>
+
+                                <span class="m-1 mx-2">
+                                    <a href="https://github.com/gurusabarish/hugo-profile" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </span>
+
+                                <span class="m-1 mx-2">
+                                    <a href="https://twitter.com/intent/tweet?text=Check&#43;it&#43;out:&amp;url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile"
+                                        target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </span>
+
+
+                                <span class="float-end">
+                                    <a class="btn btn-sm" href="https://hugo-profile.netlify.app" target="_blank">
+                                        Demo
+                                    </a>
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 my-3">
+                        <div class="card my-3 h-100" title="Image Converter">
+                            <div class="card-head">
+                                <img class="card-img-top" src="/images/projects/converter.jpg" alt="Image Converter">
+                            </div>
+                            <div class="card-body bg-transparent p-3">
+                                <div class="pb-2 bg-transparent">
+
+                                    <span class="badge badge-secondary">Django</span>
+
+                                    <span class="badge badge-secondary">Bootstrap</span>
+
+                                </div>
+                                <h5 class="card-title bg-transparent mt-1">Image Converter</h5>
+                                <div class="card-text bg-transparent secondary-font">
+                                    A web app to convert image to pdf, png to jpg, png to jpg and png to webp without
+                                    database using django.
+                                </div>
+                            </div>
+
+                            <div class="card-footer py-3">
+
+                                <span class="m-1 mx-2">
+                                    <a href="https://github.com/gurusabarish/converter" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </span>
+
+
+                                <span class="float-end">
+                                    <a class="btn btn-sm" href="https://django-converter.herokuapp.com" target="_blank">
+                                        Demo
+                                    </a>
+                                </span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <iv class="col-lg-4 col-md-6 my-3">
+                        <div class="card my-3 h-100" title="Image Converter">
+                            <div class="card-head">
+                                <img class="card-img-top" src="/images/projects/converter.jpg" alt="Image Converter">
+                            </div>
+                            <div class="card-body bg-transparent p-3">
+                                <div class="pb-2 bg-transparent">
+
+                                    <span class="badge badge-secondary">Django</span>
+
+                                    <span class="badge badge-secondary">Bootstrap</span>
+
+                                </div>
+                                <h5 class="card-title bg-transparent mt-1">Image Converter</h5>
+                                <div class="card-text bg-transparent secondary-font">
+                                    A web app to convert image to pdf, png to jpg, png to jpg and png to webp without
+                                    database using django.
+                                </div>
+                            </div>
+
+                            <div class="card-footer py-3">
+
+                                <span class="m-1 mx-2">
+                                    <a href="https://github.com/gurusabarish/converter" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </span>
+
+
+                                <span class="float-end">
+                                    <a class="btn btn-sm" href="https://django-converter.herokuapp.com" target="_blank">
+                                        Demo
+                                    </a>
+                                </span>
+
+                            </div>
+
+                        </div>
+                </div>
+
+
+            </div>
+    </div>
+    </section>
+
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h3 class="text-center">About Me</h3>
+            <div class="row justify-content-center">
+                <div class="bg-transparent row justify-content-center px-3 py-0">
+
+                    <div class="col-sm-12 col-md-8 col-lg-8 py-5">
+
+                        <div class="experience-container px-3 pt-2">
+
+                            <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
+
+
+                                <li class="nav-item px-1 bg-transparent" role="presentation">
+                                    <div class="nav-link active bg-transparent" aria-selected="true" role="tab"
+                                        data-bs-toggle="pill" id='Facebook-Jan-2022---present-tab'
+                                        data-bs-target='#pills-Facebook-Jan-2022---present'
+                                        aria-controls='Facebook-Jan-2022---present'>
+                                        Skills
+                                    </div>
+                                </li>
+
+
+
+                                <li class="nav-item px-1 bg-transparent" role="presentation">
+                                    <div class="nav-link bg-transparent" aria-selected="true" role="tab"
+                                        data-bs-toggle="pill" id='Amazon-Sep-2020---Dec-2021-tab'
+                                        data-bs-target='#pills-Amazon-Sep-2020---Dec-2021'
+                                        aria-controls='Amazon-Sep-2020---Dec-2021'>
+                                        Education
+                                    </div>
+                                </li>
+
+
+
+                                <li class="nav-item px-1 bg-transparent" role="presentation">
+                                    <div class="nav-link bg-transparent" aria-selected="true" role="tab"
+                                        data-bs-toggle="pill" id='Apple-Jan-2020---Aug-2020-tab'
+                                        data-bs-target='#pills-Apple-Jan-2020---Aug-2020'
+                                        aria-controls='Apple-Jan-2020---Aug-2020'>
+                                        Experience
+                                    </div>
+                                </li>
+
+
+
+                                <li class="nav-item px-1 bg-transparent" role="presentation">
+                                    <div class="nav-link bg-transparent" aria-selected="true" role="tab"
+                                        data-bs-toggle="pill" id='Netflix-June-2017---Nov-2019-tab'
+                                        data-bs-target='#pills-Netflix-June-2017---Nov-2019'
+                                        aria-controls='Netflix-June-2017---Nov-2019'>
+                                        Story
+                                    </div>
+                                </li>
+
+
+
+                                <li class="nav-item px-1 bg-transparent" role="presentation">
+                                    <div class="nav-link bg-transparent" aria-selected="true" role="tab"
+                                        data-bs-toggle="pill" id='Google-Feb-2016---Mar-2017-tab'
+                                        data-bs-target='#pills-Google-Feb-2016---Mar-2017'
+                                        aria-controls='Google-Feb-2016---Mar-2017'>
+                                        More
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                            <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
+
+
+                                <div class="tab-pane fade show active bg-transparent" role="tabpanel"
+                                    id='pills-Facebook-Jan-2022---present'
+                                    aria-labelledby='pills-Facebook-Jan-2022---present-tab'>
+
+                                    <div>
+                                        <span class="h4">Senior Software Developer</span>
+                                        <small>-</small>
+                                        <a href="https://example.com" target="_blank">Facebook</a>
+                                        <div class="pb-1">
+                                            <small>Jan 2022 - present</small>
+
+                                            <span class="p-2">
+                                                <span style="cursor: pointer;" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    data-bs-original-title=Working&#32;as&#32;a&#32;Senior&#32;Software&#32;Developer&#32;at&#32;Facebook>
+                                                    <i class="fas fa-info-circle fa-xs"></i>
+                                                </span>
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="py-2 featuredLink">
+                                            <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://example.com
+                                                target="_blank">
+                                                View the project
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="pt-2">
+                                        <p>I am currently working as a software developer at <a
+                                                href="https://example.com">example org.</a> in San Francisco, CA. I
+                                            am
+                                            currently working on a project that will be used to help people find the
+                                            best way to get around the city.</p>
+                                        <ul>
+                                            <li>Lead backend developer for a product.</li>
+                                            <li>Created a frontend design for a product.</li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="tab-pane fade bg-transparent" role="tabpanel"
+                                    id='pills-Amazon-Sep-2020---Dec-2021'
+                                    aria-labelledby='pills-Amazon-Sep-2020---Dec-2021-tab'>
+                                    <div>
+                                        <span class="h4">Software Developer</span>
+                                        <small>-</small>
+                                        <a href="https://example.com" target="_blank">Amazon</a>
+
+                                        <div class="pb-1">
+                                            <small>Sep 2020 - Dec 2021</small>
+
+                                            <span class="p-2">
+                                                <span style="cursor: pointer;" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    data-bs-original-title=I&#32;worked&#32;as&#32;a&#32;software&#32;developer&#32;for&#32;more&#32;than&#32;one&#32;year&#32;in&#32;Amazon.>
+                                                    <i class="fas fa-info-circle fa-xs"></i>
+                                                </span>
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="py-2 featuredLink">
+                                            <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://example.com
+                                                target="_blank">
+                                                Featured Link
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <p>I am currently working as a software developer at <a
+                                                href="https://example.com">example org.</a> in San Francisco, CA. I
+                                            am
+                                            currently working on a project that will be used to help people find the
+                                            best way to get around the city.</p>
+                                        <ul>
+                                            <li>Lead backend developer for a product.</li>
+                                            <li>Created a frontend design for a product.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane fade bg-transparent" role="tabpanel"
+                                    id='pills-Apple-Jan-2020---Aug-2020'
+                                    aria-labelledby='pills-Apple-Jan-2020---Aug-2020-tab'>
+                                    <div>
+                                        <span class="h4">Junior Software Developer</span>
+                                        <small>-</small>
+                                        <a href="https://example.com" target="_blank">Apple</a>
+
+                                        <div class="pb-1">
+                                            <small>Jan 2020 - Aug 2020</small>
+
+                                        </div>
+
+
+                                        <div class="py-2 featuredLink">
+                                            <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://example.com
+                                                target="_blank">
+                                                Featured Link
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <p>I am currently working as a software developer at <a
+                                                href="https://example.com">example org.</a> in San Francisco, CA. I
+                                            am
+                                            currently working on a project that will be used to help people find the
+                                            best way to get around the city.</p>
+                                        <ul>
+                                            <li>Lead backend developer for a product.</li>
+                                            <li>Created a frontend design for a product.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane fade bg-transparent" role="tabpanel"
+                                    id='pills-Netflix-June-2017---Nov-2019'
+                                    aria-labelledby='pills-Netflix-June-2017---Nov-2019-tab'>
+                                    <div>
+                                        <span class="h4">UI/UX Designer</span>
+                                        <small>-</small>
+                                        <a href="https://example.com" target="_blank">Netflix</a>
+
+                                        <div class="pb-1">
+                                            <small>June 2017 - Nov 2019</small>
+
+                                            <span class="p-2">
+                                                <span style="cursor: pointer;" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    data-bs-original-title=Worked&#32;as&#32;a&#32;UI/UX&#32;Designer&#32;at&#32;Netflix>
+                                                    <i class="fas fa-info-circle fa-xs"></i>
+                                                </span>
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="py-2 featuredLink">
+                                            <a class="p-2 px-4 btn btn-outline-primary btn-sm" href=https://example.com
+                                                target="_blank">
+                                                Featured Link
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <p>I am currently working as a software developer at <a
+                                                href="https://example.com">example org.</a> in San Francisco, CA. I
+                                            am
+                                            currently working on a project that will be used to help people find the
+                                            best way to get around the city.</p>
+                                        <ul>
+                                            <li>Lead backend developer for a product.</li>
+                                            <li>Created a frontend design for a product.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane fade bg-transparent" role="tabpanel"
+                                    id='pills-Google-Feb-2016---Mar-2017'
+                                    aria-labelledby='pills-Google-Feb-2016---Mar-2017-tab'>
+                                    <div>
+                                        <span class="h4">Product Designer</span>
+                                        <small>-</small>
+                                        <a href="https://example.com" target="_blank">Google</a>
+
+                                        <div class="pb-1">
+                                            <small>Feb 2016 - Mar 2017</small>
+
+                                            <span class="p-2">
+                                                <span style="cursor: pointer;" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    data-bs-original-title=Worked&#32;as&#32;a&#32;Product&#32;Designer&#32;at&#32;Google>
+                                                    <i class="fas fa-info-circle fa-xs"></i>
+                                                </span>
+                                            </span>
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="pt-2">
+                                        I am currently working as a software developer at <a
+                                            href="https://example.com">example org.</a> in San Francisco, CA. I am
+                                        currently working on a project that will be used to help people find the
+                                        best
+                                        way to get around the city.
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+    </section>
+
+
+
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h3 class="text-center">Get in Touch</h3>
+            <div class="px-0 px-md-5 px-lg-5">
+                <div class="row justify-content-center px-md-5">
+                    <div class="col-md-8 py-3">
+                        <div class="text-center">
+                            My inbox is always open. Whether you have a question or just want to say hi, I’ll try my
+                            best to get back to you!
+                        </div>
+
+                        <div class="text-center pt-3">
+                            <a href='
+                                    mailto:lia20141002699@gmail.com
+                                  ' target="_blank" class="btn">
+                                Mail me
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact-form-status"></div>
+    </section>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+        </symbol>
+        <symbol id="info-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+        </symbol>
+        <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+            <path
+                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </symbol>
+    </svg>
+
+    </div>
+    <footer>
+
+
+
+
+
+        <div class="text-center pt-2">
+
+
+
+
+            <span class="px-1">
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+
+                    <div class="pb-2">
+                        <a href="http://localhost:1313/" title="Liya Wang Profile">
+                            <img alt="Footer logo" src="/fav.png" height="40px" width="40px">
+                        </a>
+                    </div>
+
+                    &copy; 2025 All rights reserved
+                    <div class="text-secondary">
+
+                        Liya Wang
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script>
+        if (localStorage.getItem("pref-theme") === "dark") {
+            document.body.classList.add('dark');
+        } else if (localStorage.getItem("pref-theme") === "light") {
+            document.body.classList.remove('dark')
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+        }
+
+    </script>
+    <script>
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            if (document.body.className.includes("dark")) {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            } else {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            }
+        })
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+    </script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <section id="search-content" class="py-2">
+        <div class="container" id="search-results"></div>
+    </section>
+</body>
+
+</html>
