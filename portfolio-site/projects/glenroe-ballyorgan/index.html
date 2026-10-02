@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glenroe-Ballyorgan AR App · Liya Wang</title>
+  <meta name="description" content="An iOS app that preserves the history and culture of Glenroe-Ballyorgan, a rural community in the Ballyhoura region of Ireland, through GPS-triggered audio tours, an AR bird-finding river walk and community content.">
+  <meta property="og:title" content="Glenroe-Ballyorgan AR App · Liya Wang">
+  <meta property="og:description" content="An iOS app that preserves the history and culture of Glenroe-Ballyorgan, a rural community in the Ballyhoura region of Ireland, through GPS-triggered audio tours, an AR bird-finding river walk and community content.">
+  <link rel="icon" href="/fav.png?v=2" type="image/png">
+  <link rel="apple-touch-icon" href="/fav.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint.
+    (function () {
+      var pref = null;
+      try { pref = localStorage.getItem('pref-theme'); } catch (e) {}
+      if (pref === 'dark' || (!pref && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.body.classList.add('dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="/"><img src="/fav.png?v=2" alt="" width="30" height="30">LiYa W</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75zM1.75 12a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H1.75z"/></svg></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#projects" aria-current="page">Projects</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project">
+      <div class="container">
+      <a class="back" href="/#projects"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5.3a1 1 0 0 1 0 1.4L6.3 11H20a1 1 0 1 1 0 2H6.3l4.3 4.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0z"/></svg> All projects</a>
+
+      <header>
+        <p class="kicker">MSc thesis · iOS · 2024</p>
+        <h1>Glenroe-Ballyorgan AR App</h1>
+        <p class="lead">An iOS app that preserves the history and culture of Glenroe-Ballyorgan, a rural community in the Ballyhoura region of Ireland, through GPS-triggered audio tours, an AR bird-finding river walk and community content.</p>
+        <div class="badges"><span class="badge">Swift</span><span class="badge">UIKit</span><span class="badge">ARKit</span><span class="badge">SceneKit</span><span class="badge">Core Location</span><span class="badge">Mapbox</span><span class="badge">MapKit</span><span class="badge">Firebase</span><span class="badge">AVFoundation</span><span class="badge">Speech</span><span class="badge">XCTest</span></div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Liya66/Glenroe-Ballyorgan-Interactive-Culture-App" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg> GitHub</a><span class="btn" aria-disabled="true" title="Live link coming soon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg> Live site · coming soon</span>
+        </div>
+        <dl class="facts">
+          <div><dt>Context</dt><dd>MSc Interactive Media, UCC · First Class Honours</dd></div>
+          <div><dt>Partner</dt><dd>Ballyhoura Development CLG</dd></div>
+          <div><dt>Role</dt><dd>Researcher, designer and sole developer</dd></div>
+          <div><dt>Target</dt><dd>iOS 17.2+ · tested on iPhone XS</dd></div>
+        </dl>
+      </header>
+
+      <section class="block">
+        <h2>Overview</h2>
+        <div class="prose"><p>Much of Glenroe-Ballyorgan's heritage lived on paper, on signs along the trails, or
+on a <em>Living Land</em> audio-tour CD sold only at tourist offices. Working with
+<strong>Ballyhoura Development</strong>, I reviewed the existing digital efforts in the area,
+gathered input from the community and turned the findings into twelve functional
+requirements for one app that both younger residents and visitors would use.</p>
+<p>The result is a native iOS app built on an MVC architecture. The <strong>audio tour</strong>
+brings all 22 tracks from the CD to the places they describe. On the <strong>Keale River
+walk</strong>, animated AR birds appear at the real signposts that introduce each species.
+There are also local history articles, community events and comments. Firebase
+handles accounts, media and real-time data, Mapbox draws the routes, and ARKit with
+SceneKit renders the birds.</p></div>
+      </section>
+      <section class="block">
+        <h2>Architecture</h2>
+        <p class="note">Model-View-Controller, as in the thesis. Controllers coordinate the device sensors and Firebase, models stay reusable, and views only render.</p>
+        <div class="mindmap-frame">
+          <pre class="mermaid-src" hidden>mindmap
+  root((Glenroe-Ballyorgan app))
+    Controllers
+      AudioTourViewController
+      BaseMapViewController
+      RouteManager · StoryManager
+      EventManager
+      VoiceControlManager
+    Models
+      AudioLocationData
+      BirdLocationData
+      ContentItem · events JSON
+    Views
+      UIKit storyboards
+      Custom cells and controls
+      Tab bar navigation
+    Device frameworks
+      Core Location geofences
+      ARKit + SceneKit birds
+      SFSpeechRecognizer
+      AVFoundation playback
+      MapKit annotations
+    Cloud · Firebase
+      Auth · email and Google
+      Storage · audio, events.json
+      Realtime Database · comments
+      Crashlytics
+    Mapbox
+      GeoJSON routes
+      Animated polylines
+    Offline
+      Cached audio downloads
+      Bundled GeoJSON, GPX, 3D models</pre>
+          <div class="mindmap" role="img" aria-label="Architecture mindmap of Glenroe-Ballyorgan AR App"></div>
+        </div>
+      </section>
+      <section class="block" data-lightbox>
+        <h2>Key features</h2>
+        <article class="feature has-image">
+          <div class="feature-text">
+            <h3>GPS-triggered audio tours</h3>
+            <div class="prose"><p>Every stop on the tour is a 50 m <code>CLCircularRegion</code> monitored by
+<code>CLLocationManager</code>. Entering a region plays its story through <code>AVAudioPlayer</code>,
+and the app tracks the active region so one stop can't retrigger while you
+linger.</p>
+<p>Audio is downloaded once from Firebase Storage, with a progress bar, and cached
+on the device, so the tour still works where rural mobile coverage drops out.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/glenroe-ballyorgan/screens-tours.webp" aria-label="Enlarge: Four app screens: audio player with GPS detection, interactive tours, account and explore">
+              <img class="framed" src="/images/projects/glenroe-ballyorgan/screens-tours.webp" width="1024" height="536" alt="Four app screens: audio player with GPS detection, interactive tours, account and explore" loading="lazy">
+            </button>
+            <figcaption>Audio player with GPS detection, Interactive Tours (the launch screen), My Account and Explore.</figcaption>
+          </figure>
+        </article>
+        <article class="feature portrait flip">
+          <div class="feature-text">
+            <h3>AR bird-finding walk along the River Keale</h3>
+            <div class="prose"><p>As you walk, <code>locationManager(_:didUpdateLocations:)</code> checks your distance to each
+bird location. Within 30 m, the matching SceneKit model (a robin, a bluebird or
+the local barn owl) is placed in an <code>ARWorldTrackingConfiguration</code> session and
+follows the camera.</p>
+<p>The trigger points match the physical signs along the walk that introduce each
+species, so the AR layer adds to the real trail instead of replacing it.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/glenroe-ballyorgan/ar-robin.webp" aria-label="Enlarge: An animated 3D robin standing on a gravel path in augmented reality">
+              <img class="framed" src="/images/projects/glenroe-ballyorgan/ar-robin.webp" width="1125" height="2436" alt="An animated 3D robin standing on a gravel path in augmented reality" loading="lazy">
+            </button>
+            <figcaption>An animated robin placed in AR (tested on the UCC campus), running at 60 fps.</figcaption>
+          </figure>
+        </article>
+        <article class="feature">
+          <div class="feature-text">
+            <h3>Talk to the birds</h3>
+            <div class="prose"><p>During the AR walk you can ask questions out loud. <code>SFSpeechRecognizer</code> streams
+microphone buffers, and a <strong>Levenshtein-distance fuzzy matcher</strong> maps what it
+heard to the nearest known question, so <em>"what's special about this place"</em>
+still gets the answer about the Keale River's ancient woodland.</p>
+<p>Strict command matching was too brittle in testing because of wind, accents and
+different microphones, so it was replaced. A 2-second silence timer stops the
+recogniser to save power and avoid processing background noise forever.</p></div>
+          </div>
+        </article>
+        <article class="feature has-image flip">
+          <div class="feature-text">
+            <h3>Animated routes, events and community comments</h3>
+            <div class="prose"><p>Tour routes are GeoJSON files drawn with Mapbox, and the polyline grows point by
+point to show the way. Recent events come from a JSON file in Firebase Storage,
+so the community can update them by replacing a file, with no database changes
+or app release.</p>
+<p>History articles on the Explore tab have a comment section backed by Firebase
+Realtime Database, which syncs new comments to every reader instantly.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/glenroe-ballyorgan/events-map.webp" aria-label="Enlarge: Recent events list, an event detail page, an animated tour route on a map and the tours screen">
+              <img class="framed" src="/images/projects/glenroe-ballyorgan/events-map.webp" width="1006" height="518" alt="Recent events list, an event detail page, an animated tour route on a map and the tours screen" loading="lazy">
+            </button>
+            <figcaption>Recent Events, event detail, the animated Mapbox route and the tour screen.</figcaption>
+          </figure>
+        </article>
+        <article class="feature has-image">
+          <div class="feature-text">
+            <h3>Comments without clutter</h3>
+            <div class="prose"><p>The comment area stays hidden until a reader asks for it, which keeps articles
+clean. Signing in with email or Google through Firebase Auth is needed only to
+post.</p>
+<p>A fix I'm pleased with: the keyboard used to cover the text field. The view now
+listens for keyboard notifications, adjusts the scroll view's insets and scrolls
+the field into view.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/glenroe-ballyorgan/comments.webp" aria-label="Enlarge: A local history article with its comment section collapsed, then expanded with a text box and Send button">
+              <img class="framed" src="/images/projects/glenroe-ballyorgan/comments.webp" width="792" height="542" alt="A local history article with its comment section collapsed, then expanded with a text box and Send button" loading="lazy">
+            </button>
+            <figcaption>The comment area toggles open on demand and stays visible above the keyboard.</figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="block prose">
+<h2>Design</h2>
+<p><img class="icon-art" alt="The app icon: a tree, a winding river and a small bird" src="/images/projects/glenroe-icon.png" /></p>
+<p>The icon brings together a tree, the river and a bird, which stand for the AR bird walk
+along the River Keale. The palette is black, white and soft greens, with yellow and
+orange accents taken from Ballyhoura sunsets. The type is AvenirNext alongside the
+system font. The app opens on <strong>Interactive Tours</strong>, its main feature, and a bottom tab bar
+gives one-tap access to tours, events, Explore and the user's account.</p>
+<p>Key design decisions from the thesis:</p>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Chosen</th>
+<th>Rejected because</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data</td>
+<td>Firebase (Auth, Storage, Realtime DB)</td>
+<td>Core Data has no built-in cloud sync or multi-user access</td>
+</tr>
+<tr>
+<td>Maps</td>
+<td>Mapbox + MapKit</td>
+<td>Apple Maps alone lacked GeoJSON overlays and custom styling</td>
+</tr>
+<tr>
+<td>AR</td>
+<td>ARKit + SceneKit</td>
+<td>Unity AR Foundation was too heavy for an iOS-only app</td>
+</tr>
+<tr>
+<td>Voice</td>
+<td>SFSpeechRecognizer + fuzzy matching</td>
+<td>Exact command matching failed on real speech</td>
+</tr>
+</tbody>
+</table>
+<h2>Testing and evaluation</h2>
+<p>Apple's testing restrictions limited how much user feedback I could collect, so the
+evaluation relied on <strong>XCTest</strong> suites, an iPhone XS on site and Instruments profiling:</p>
+<ul>
+<li><strong>Unit tests</strong> covered AR session setup and model placement, all eight
+  <code>VoiceControlManager</code> cases (including Levenshtein matching and the silence timer)
+  and the audio tour's location manager and geofences. The test for entering a region
+  was hard to automate without real GPS and remote files, and the thesis discusses
+  that limitation openly.</li>
+<li><strong>Integration tests</strong> checked GPS → UI updates, voice → audio playback, and comments
+  round-tripping through Firebase in real time. All passed.</li>
+<li><strong>Profiling</strong> with Instruments (Core Animation, Time Profiler and memory analysis) showed a responsive
+  UI. It also flagged CPU and heat spikes during AR rendering and audio downloads,
+  plus memory growth worth chasing, and those became the optimisation backlog.</li>
+</ul>
+<h2>Challenges</h2>
+<ul>
+<li><strong>Animating a GeoJSON route.</strong> Static rendering loads every coordinate at once,
+  but the animation needed them one at a time. I parsed the GeoJSON by hand and fed
+  a timer that updates the Mapbox source every 100 ms.</li>
+<li><strong>A recogniser that never stopped.</strong> Background noise kept speech recognition alive.
+  The fix was the silence timer, which resets whenever new words arrive.</li>
+<li><strong>Dependency conflicts</strong> between the Mapbox and Firebase packages turned out to be a
+  typo in <code>.netrc</code>, found by working through network and configuration checks one by one.</li>
+</ul>
+<h2>What's next</h2>
+<p>Gesture and richer voice interaction in AR, community-contributed stories and photos
+pinned to locations, and more local species and tours as more of the area's heritage is
+digitised.</p>
+      </section>
+
+      <nav class="pager" aria-label="More projects">
+        <a href="/projects/mern-photo-app/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5.3a1 1 0 0 1 0 1.4L6.3 11H20a1 1 0 1 1 0 2H6.3l4.3 4.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0z"/></svg> MERN Photo-Sharing App</a>
+        <a href="/projects/webgl-virtual-classroom/">WebGL Virtual Classroom <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 5.3a1 1 0 0 0 0 1.4l4.3 4.3H4a1 1 0 1 0 0 2h13.7l-4.3 4.3a1 1 0 1 0 1.4 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.4 0z"/></svg></a>
+      </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <img src="/fav.png?v=2" alt="Red panda logo" width="40" height="40">
+    <p>&copy; <span data-year>2026</span> All rights reserved</p>
+    <p><a href="/">Liya Wang</a></p>
+  </footer>
+
+  <script src="/js/main.js?v=2"></script>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    // Warm palette to match the site; light nodes read well on both the light and dark panel.
+    const warm = ["#f6c9b8", "#f5ddb0", "#e3c6d6", "#d9e3c4", "#f2b9a3", "#e8d3c0", "#d6cfe6", "#f0c4c4"];
+    const vars = { primaryColor: "#fdf6f3", primaryTextColor: "#290116", primaryBorderColor: "#bf3e1a", lineColor: "#8d4c47", fontFamily: "Alata, sans-serif" };
+    warm.forEach((c, i) => { vars["cScale" + i] = c; vars["cScaleLabel" + i] = "#290116"; });
+    mermaid.initialize({ startOnLoad: false, theme: "base", themeVariables: vars, mindmap: { padding: 14 } });
+    const src = document.querySelector(".mermaid-src").textContent;
+    const { svg } = await mermaid.render("mindmap-svg", src);
+    document.querySelector(".mindmap").innerHTML = svg;
+  </script>
+
+</body>
+</html>

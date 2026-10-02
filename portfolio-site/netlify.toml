@@ -1,7 +1,9 @@
+# Plain static site: no build step, Netlify serves this folder as-is.
 [build]
-  publish = "public"
-  command = "hugo"
+  publish = "."
+  command = ""
 
-[context.production.environment]
-  HUGO_VERSION = "0.120.4"
-  
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

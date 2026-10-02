@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liya Wang · Full-stack developer</title>
+  <meta name="description" content="Liya Wang, a full-stack developer in Dublin. I build web, game and mobile systems in TypeScript, PHP, JavaScript and Swift.">
+  <meta property="og:title" content="Liya Wang · Full-stack developer">
+  <meta property="og:description" content="Liya Wang, a full-stack developer in Dublin. I build web, game and mobile systems in TypeScript, PHP, JavaScript and Swift.">
+  <link rel="icon" href="/fav.png?v=2" type="image/png">
+  <link rel="apple-touch-icon" href="/fav.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint.
+    (function () {
+      var pref = null;
+      try { pref = localStorage.getItem('pref-theme'); } catch (e) {}
+      if (pref === 'dark' || (!pref && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.body.classList.add('dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="/"><img src="/fav.png?v=2" alt="" width="30" height="30">LiYa W</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75zM1.75 12a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H1.75z"/></svg></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="fade-left">
+          <span class="subtitle">Hi, my name is</span>
+          <h1>Liya.</h1>
+          <h2>Full-stack developer</h2>
+          <p>A developer based in Dublin with an MSc in Interactive Media (Computer Science, First Class Honours). I build and test full-stack systems, from TypeScript and Next.js product features to PHP game engines and iOS AR apps, and I care about making them reliable. Also a photographer.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="icon-btn" href="https://github.com/Liya66" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/liya-w" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a class="icon-btn" href="/gallery/" aria-label="Photo gallery"><img src="/fav.png?v=2" alt=""></a>
+          </div>
+        </div>
+        <img class="framed hero-photo fade-in" src="/images/headshot.webp" width="680" height="733" alt="Illustrated portrait of Liya">
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h3 class="section-title">Projects</h3>
+        <div class="cards">
+        <article class="card">
+          <a class="card-head" href="/projects/mathdeck/" tabindex="-1" aria-hidden="true"><img src="/images/projects/mathdeck.webp" alt="" loading="lazy"></a>
+          <div class="card-body">
+            <div class="badges"><span class="badge">PHP 8.2</span><span class="badge">MySQL</span><span class="badge">Docker</span><span class="badge">PHPUnit</span><span class="badge">OpenAPI</span></div>
+            <h4 class="card-title">MathDeck · Educational Card Game Engine</h4>
+            <p class="card-text">A turn-based maths card game. Its event-sourced PHP 8.2 rules engine decides every play on the server, so game state can&#x27;t be desynchronised or manipulated from the client. It also has a teacher analytics dashboard, a deck editor with a solvability linter, OpenAPI 3.0 contracts and an 85% coverage gate.</p>
+          </div>
+          <div class="card-foot">
+            <a class="btn btn-sm" href="/projects/mathdeck/">View</a>
+            <a class="gh" href="https://github.com/Liya66/mathdeck" target="_blank" rel="noopener" aria-label="MathDeck · Educational Card Game Engine on GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card-head" href="/projects/mern-photo-app/" tabindex="-1" aria-hidden="true"><img src="/images/projects/1photoApp.webp" alt="" loading="lazy"></a>
+          <div class="card-body">
+            <div class="badges"><span class="badge">React</span><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">MongoDB</span></div>
+            <h4 class="card-title">MERN Photo-Sharing App</h4>
+            <p class="card-text">A full-stack, Pinterest-style photo sharing and editing app with boards, pins, comments, likes and follows. It uses JWT auth with cookie sessions, a REST API and image upload and editing, and the photos are my own.</p>
+          </div>
+          <div class="card-foot">
+            <a class="btn btn-sm" href="/projects/mern-photo-app/">View</a>
+            <a class="gh" href="https://github.com/Liya66/Mern-Photo-App" target="_blank" rel="noopener" aria-label="MERN Photo-Sharing App on GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card-head" href="/projects/glenroe-ballyorgan/" tabindex="-1" aria-hidden="true"><img src="/images/projects/2iOs.webp" alt="" loading="lazy"></a>
+          <div class="card-body">
+            <div class="badges"><span class="badge">Swift</span><span class="badge">ARKit</span><span class="badge">Mapbox</span><span class="badge">Firebase</span></div>
+            <h4 class="card-title">Glenroe-Ballyorgan AR App</h4>
+            <p class="card-text">My MSc thesis app. This iOS app preserves local history in rural Ireland through GPS-triggered audio tours, a gamified ARKit experience and Mapbox maps, with Firebase for media and real-time sync. I co-designed it with the community through Ballyhoura Development.</p>
+          </div>
+          <div class="card-foot">
+            <a class="btn btn-sm" href="/projects/glenroe-ballyorgan/">View</a>
+            <a class="gh" href="https://github.com/Liya66/Glenroe-Ballyorgan-Interactive-Culture-App" target="_blank" rel="noopener" aria-label="Glenroe-Ballyorgan AR App on GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card-head" href="/projects/webgl-virtual-classroom/" tabindex="-1" aria-hidden="true"><img src="/images/projects/4webGL.webp" alt="" loading="lazy"></a>
+          <div class="card-body">
+            <div class="badges"><span class="badge">three.js</span><span class="badge">WebGL</span><span class="badge">WebXR</span><span class="badge">JavaScript</span></div>
+            <h4 class="card-title">WebGL Virtual Classroom</h4>
+            <p class="card-text">A 3D virtual classroom built with three.js. It has animated glTF models, WebXR/VR controller interaction, and in-scene controls for video, audio and other settings.</p>
+          </div>
+          <div class="card-foot">
+            <a class="btn btn-sm" href="/projects/webgl-virtual-classroom/">View</a>
+            <a class="gh" href="https://github.com/Liya66/WebGL-virtual-classroom" target="_blank" rel="noopener" aria-label="WebGL Virtual Classroom on GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+        </article>
+        <article class="card">
+          <a class="card-head" href="/projects/taopiaopiao/" tabindex="-1" aria-hidden="true"><img src="/images/projects/3TaoPP.webp" alt="" loading="lazy"></a>
+          <div class="card-body">
+            <div class="badges"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">UX research</span></div>
+            <h4 class="card-title">TaoPiaoPiao Web Redesign</h4>
+            <p class="card-text">A front-end redesign of the TaoPiaoPiao movie-ticketing site, based on a full usability analysis of the original.</p>
+          </div>
+          <div class="card-foot">
+            <a class="btn btn-sm" href="/projects/taopiaopiao/">View</a>
+            <a class="gh" href="https://github.com/Liya66/TaoPiaoPiao-Redesign" target="_blank" rel="noopener" aria-label="TaoPiaoPiao Web Redesign on GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h3 class="section-title">About Me</h3>
+        <div class="tabbox">
+          <ul class="tabs" role="tablist" aria-label="About me">
+              <li role="presentation"><button class="tab" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="true" tabindex="0">Skills</button></li>
+              <li role="presentation"><button class="tab" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="false" tabindex="-1">Experience</button></li>
+              <li role="presentation"><button class="tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1">Education</button></li>
+              <li role="presentation"><button class="tab" role="tab" id="tab-certs" aria-controls="panel-certs" aria-selected="false" tabindex="-1">Certifications</button></li>
+              <li role="presentation"><button class="tab" role="tab" id="tab-story" aria-controls="panel-story" aria-selected="false" tabindex="-1">My Story</button></li>
+          </ul>
+            <div class="tabpanel" role="tabpanel" id="panel-skills" aria-labelledby="tab-skills">
+              <p>I came to software from teaching. After a BA in English I spent several years as a university English instructor, and the parts of that job I liked best were the ones where technology helped: building digital language corpora, setting up learning-management workflows, automating the tedious parts. In 2023 I moved to Ireland to do it properly. I took an MSc in Interactive Media (Computer Science) at University College Cork and graduated with First Class Honours.</p>
+<p>Since then I have worked as a CS lab demonstrator at UCC, built an AR iOS app for a rural community group, and spent six months as a software engineer at <strong>Adherent</strong>, an enterprise SaaS company. There I shipped Next.js features and worked on making a fragile platform more robust with test coverage, release validation and root-cause analysis. I like work where the hard part is getting the system right, not only getting it to run.</p>
+              <p>Technologies I&#x27;ve been working with recently:</p>
+              <ul class="ticks two-col"><li>TypeScript / JavaScript</li><li>React &amp; Next.js</li><li>Node.js / Express</li><li>PHP 8.2+</li><li>Swift, ARKit, Firebase</li><li>MySQL, PostgreSQL, MongoDB</li><li>Redis, Docker, Nginx</li><li>REST &amp; OpenAPI design</li><li>PHPUnit, Cypress, JUnit</li><li>AWS, CI/CD, Git</li></ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience" hidden>
+                            <div class="entry">
+                <div class="entry-title">Software Engineer, QA &amp; Support (Internship)</div>
+                <div><a class="ulink" href="https://www.adherent.com" target="_blank" rel="noopener">Adherent (formerly Compliance &amp; Risks)</a> <small>· Feb 2026 - Aug 2026</small></div>
+                <ul class="ticks">
+<li>Built and shipped full-stack features on a TypeScript / Next.js / React monorepo through code review and CI/CD, including a multi-select filtering component with client-side state backed by parameterised ORM queries.</li>
+<li>Worked on an AI-native sustainability platform: refined agent prompts via the Vercel AI SDK and tightened schema definitions to reduce model reasoning drift.</li>
+<li>Found components with no automated tests where defects had been shipping silently, scoped a 19-ticket coverage programme, and designed a reusable mock harness so new tests share fixtures instead of rewriting them.</li>
+<li>Validated work from other teams before release, including catching a platform-wide regression in a release candidate before it shipped.</li>
+<li>Root-caused production defects across the stack (a stale search index serving frozen reads, a swallowed DB constraint violation aborting a nightly pipeline, an AWS firewall rule blocking legitimate traffic) and wrote runbooks and an onboarding guide the team adopted.</li>
+</ul>
+              </div>
+              <div class="entry">
+                <div class="entry-title">Lab Demonstrator, Computer Science</div>
+                <div><a class="ulink" href="https://www.ucc.ie/en/compsci/" target="_blank" rel="noopener">University College Cork</a> <small>· Sep 2024 - Apr 2025</small></div>
+                <ul class="ticks">
+<li>Supported postgraduate students in CS6113 Internet-based Applications and other modules.</li>
+<li>Helped students debug JavaScript, PHP and Bash in a Linux lab, and guided them through REST APIs and full-stack design for distributed web applications.</li>
+</ul>
+              </div>
+              <div class="entry">
+                <div class="entry-title">Software Developer (Volunteer)</div>
+                <div><a class="ulink" href="https://www.ballyhouradevelopment.com" target="_blank" rel="noopener">Ballyhoura Development CLG</a> <small>· Jun 2024 - Sep 2024</small></div>
+                <ul class="ticks">
+<li>Delivered the Glenroe-Ballyorgan iOS app for the community: GPS-triggered audio tours, a gamified AR experience (ARKit), and Mapbox with Firebase for media and real-time sync.</li>
+<li>Ran needs analysis and participatory design sessions with community stakeholders, then tested and evaluated the app with them on device.</li>
+</ul>
+              </div>
+              <div class="entry">
+                <div class="entry-title">University English Instructor</div>
+                <div>The Scotland Academy, Wuxi Taihu University <small>· May 2021 - Aug 2023</small></div>
+                <p>Taught General English and English for Academic Purposes on a UK-validated degree programme run with the University of the West of Scotland, and co-designed the EAP curriculum.</p>
+              </div>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-education" aria-labelledby="tab-education" hidden>
+                            <div class="entry">
+                <div class="entry-title">MSc Interactive Media (Computer Science)</div>
+                <div><a class="ulink" href="https://www.ucc.ie/en/compsci/" target="_blank" rel="noopener">University College Cork</a> <small>· 2023 - 2024 · First Class Honours (1:1)</small></div>
+                <ul class="ticks">
+<li>Modules: Human-Computer Interaction (94%), Mobile Applications (84%), Future &amp; Emerging Technologies (81%), Internet-based Applications.</li>
+<li>Thesis: <em>Co-Design for Cultural Preservation in Rural Ireland</em>. I designed, built and evaluated a gamified AR iOS app with the Glenroe-Ballyorgan community.</li>
+<li>SEFS Merit-Based Scholarship, 2023. Participant in the Microsoft / UCC Sustainable Cities Challenge.</li>
+</ul>
+              </div>
+              <div class="entry">
+                <div class="entry-title">BA English</div>
+                <div>China University of Geosciences <small>· 2014 - 2018 · 87% (First Class Honours equivalent)</small></div>
+                <p>Included coursework in Statistics and Computer Programming.</p>
+              </div>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-certs" aria-labelledby="tab-certs" hidden>
+              <ul class="ticks"><li><strong>Oracle Certified Professional</strong>: MySQL 8.0 Database Developer (2025)</li><li><strong>Cypress End-to-End Testing</strong>: Cypress.io certification (2026)</li><li><strong>JavaScript Algorithms &amp; Data Structures</strong>: freeCodeCamp certification (2024)</li><li><strong>UN WSIS+20 Input Paper</strong>: Co-author, &quot;Advancing Low Earth Orbit Satellite Internet Infrastructure&quot; (Geneva, 2024)</li></ul>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-story" aria-labelledby="tab-story" hidden>
+              <p>I’ve listed some of my relevant experiences here. You might notice a few gaps — those are explained on my <a class="ulink" href="https://www.linkedin.com/in/liya-w" target="_blank" rel="noopener">LinkedIn</a> profile. You can read the facts and timelines, but still, you don’t know the whole story.</p>
+                <p>I was following a solid, traditional path — moving upward from education into a stable career. Then one day, I decided to move to Ireland to study. That’s what people see. But the truth is, I’ve always been passionate about technology — and that passion has quietly coexisted with everything else I’ve done.</p>
+                <p>I love using technology to automate processes, solve problems, and make things easier — no matter what field I’m in. After finishing my Arts degree, I explored different paths and eventually chose the most reliable one: becoming a teacher. But deep down, I always knew there was more to life than teaching English. I believed there were other ways to help people — to improve lives or even the world.</p>
+                <p>I actively experimented with this idea — from building digital linguistic corpora to adopting learning management systems for better educational workflows. Using technology to solve real problems fascinates me. Beyond the practical benefits like saving time or reducing errors, it gives me hope. It feels like we’re making progress — like we’re building toward something better.</p>
+                <p>I also take photos, both professionally and as a hobby. I like to freeze a moment in time — or even recreate it, depending on how I feel. Photography gives me the power to express my unique perspective and tell my own story. The feel of a fine machine in your hands is nice — but learning what it does and using it to create something meaningful? That’s magical. Feel free to check out more of my great photos on <a class="ulink" href="https://www.instagram.com/liya_w66/" target="_blank" rel="noopener">Instagram</a>.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact">
+        <h3 class="section-title">Get in Touch</h3>
+        <p>I&#x27;m looking for software engineering roles in Ireland. Whether you have a role in mind, a question about one of my projects, or just want to say hi, my inbox is open.</p>
+        <a class="btn" href="mailto:liya66.w@gmail.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.4l10 6.25L22 6.4V6H2zm20 2.75-9.47 5.92a1 1 0 0 1-1.06 0L2 8.75V18h20V8.75z"/></svg> Mail me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="/fav.png?v=2" alt="Red panda logo" width="40" height="40">
+    <p>&copy; <span data-year>2026</span> All rights reserved</p>
+    <p><a href="/">Liya Wang</a></p>
+  </footer>
+
+  <script src="/js/main.js?v=2"></script>
+</body>
+</html>

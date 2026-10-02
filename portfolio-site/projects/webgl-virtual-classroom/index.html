@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebGL Virtual Classroom · Liya Wang</title>
+  <meta name="description" content="A small 3D classroom in the browser, built with three.js, that you can walk through on a desktop or in VR.">
+  <meta property="og:title" content="WebGL Virtual Classroom · Liya Wang">
+  <meta property="og:description" content="A small 3D classroom in the browser, built with three.js, that you can walk through on a desktop or in VR.">
+  <link rel="icon" href="/fav.png?v=2" type="image/png">
+  <link rel="apple-touch-icon" href="/fav.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint.
+    (function () {
+      var pref = null;
+      try { pref = localStorage.getItem('pref-theme'); } catch (e) {}
+      if (pref === 'dark' || (!pref && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.body.classList.add('dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="/"><img src="/fav.png?v=2" alt="" width="30" height="30">LiYa W</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75zM1.75 12a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H1.75z"/></svg></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#projects" aria-current="page">Projects</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project">
+      <div class="container">
+      <a class="back" href="/#projects"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5.3a1 1 0 0 1 0 1.4L6.3 11H20a1 1 0 1 1 0 2H6.3l4.3 4.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0z"/></svg> All projects</a>
+
+      <header>
+        <p class="kicker">Coursework · three.js · 2024</p>
+        <h1>WebGL Virtual Classroom</h1>
+        <p class="lead">A small 3D classroom in the browser, built with three.js, that you can walk through on a desktop or in VR.</p>
+        <div class="badges"><span class="badge">three.js</span><span class="badge">WebGL</span><span class="badge">WebXR</span><span class="badge">JavaScript</span><span class="badge">glTF</span></div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Liya66/WebGL-virtual-classroom" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg> GitHub</a><span class="btn" aria-disabled="true" title="Live link coming soon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg> Live site · coming soon</span>
+        </div>
+      </header>
+
+      <section class="block">
+        <h2>Overview</h2>
+        <div class="prose"><p>An early coursework project from my MSc. A glTF classroom scene with animated cat
+models, a video screen and positional audio, which you can explore with orbit
+controls or in a VR headset through WebXR. It came with a written design document.</p></div>
+      </section>
+      <section class="block">
+        <h2>Architecture</h2>
+        <div class="mindmap-frame">
+          <pre class="mermaid-src" hidden>mindmap
+  root((Virtual Classroom))
+    Scene
+      glTF classroom and textbooks
+      Animated cats · AnimationMixer
+      Spotlight and shadows
+    Media
+      Video texture screen
+      Positional audio
+    Controls
+      OrbitControls
+      dat.GUI panels
+    WebXR
+      VRButton
+      Controller models
+      Raycast pointer lines</pre>
+          <div class="mindmap" role="img" aria-label="Architecture mindmap of WebGL Virtual Classroom"></div>
+        </div>
+      </section>
+      <section class="block" data-lightbox>
+        <h2>Key features</h2>
+        <article class="feature has-image">
+          <div class="feature-text">
+            <h3>Explore on a desktop or in VR</h3>
+            <div class="prose"><p>Animated models play through <code>AnimationMixer</code>, and a video plays on an in-scene
+screen as a <code>VideoTexture</code>. <strong>dat.GUI</strong> panels control the video and the
+positional audio tracks. In VR, controller models with raycast pointer lines
+replace the mouse.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/webgl-virtual-classroom/classroom-full.webp" aria-label="Enlarge: A 3D classroom rendered in the browser with desks, books and animated cat models">
+              <img class="framed" src="/images/projects/webgl-virtual-classroom/classroom.webp" width="1600" height="900" alt="A 3D classroom rendered in the browser with desks, books and animated cat models" loading="lazy">
+            </button>
+          </figure>
+        </article>
+      </section>
+
+      <nav class="pager" aria-label="More projects">
+        <a href="/projects/glenroe-ballyorgan/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5.3a1 1 0 0 1 0 1.4L6.3 11H20a1 1 0 1 1 0 2H6.3l4.3 4.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0z"/></svg> Glenroe-Ballyorgan AR App</a>
+        <a href="/projects/taopiaopiao/">TaoPiaoPiao Web Redesign <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 5.3a1 1 0 0 0 0 1.4l4.3 4.3H4a1 1 0 1 0 0 2h13.7l-4.3 4.3a1 1 0 1 0 1.4 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.4 0z"/></svg></a>
+      </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <img src="/fav.png?v=2" alt="Red panda logo" width="40" height="40">
+    <p>&copy; <span data-year>2026</span> All rights reserved</p>
+    <p><a href="/">Liya Wang</a></p>
+  </footer>
+
+  <script src="/js/main.js?v=2"></script>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    // Warm palette to match the site; light nodes read well on both the light and dark panel.
+    const warm = ["#f6c9b8", "#f5ddb0", "#e3c6d6", "#d9e3c4", "#f2b9a3", "#e8d3c0", "#d6cfe6", "#f0c4c4"];
+    const vars = { primaryColor: "#fdf6f3", primaryTextColor: "#290116", primaryBorderColor: "#bf3e1a", lineColor: "#8d4c47", fontFamily: "Alata, sans-serif" };
+    warm.forEach((c, i) => { vars["cScale" + i] = c; vars["cScaleLabel" + i] = "#290116"; });
+    mermaid.initialize({ startOnLoad: false, theme: "base", themeVariables: vars, mindmap: { padding: 14 } });
+    const src = document.querySelector(".mermaid-src").textContent;
+    const { svg } = await mermaid.render("mindmap-svg", src);
+    document.querySelector(".mindmap").innerHTML = svg;
+  </script>
+
+</body>
+</html>

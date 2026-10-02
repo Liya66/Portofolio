@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathDeck · Liya Wang</title>
+  <meta name="description" content="A turn-based maths card game. Learners lay operand and operator cards into an equation that hits a target, and an event-sourced PHP engine decides every outcome on the server.">
+  <meta property="og:title" content="MathDeck · Liya Wang">
+  <meta property="og:description" content="A turn-based maths card game. Learners lay operand and operator cards into an equation that hits a target, and an event-sourced PHP engine decides every outcome on the server.">
+  <link rel="icon" href="/fav.png?v=2" type="image/png">
+  <link rel="apple-touch-icon" href="/fav.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=2">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint.
+    (function () {
+      var pref = null;
+      try { pref = localStorage.getItem('pref-theme'); } catch (e) {}
+      if (pref === 'dark' || (!pref && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.body.classList.add('dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="/"><img src="/fav.png?v=2" alt="" width="30" height="30">LiYa W</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75zM1.75 12a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H1.75z"/></svg></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#projects" aria-current="page">Projects</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project">
+      <div class="container">
+      <a class="back" href="/#projects"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5.3a1 1 0 0 1 0 1.4L6.3 11H20a1 1 0 1 1 0 2H6.3l4.3 4.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0z"/></svg> All projects</a>
+
+      <header>
+        <p class="kicker">Educational game engine · 2026</p>
+        <h1>MathDeck</h1>
+        <p class="lead">A turn-based maths card game. Learners lay operand and operator cards into an equation that hits a target, and an event-sourced PHP engine decides every outcome on the server.</p>
+        <div class="badges"><span class="badge">PHP 8.2</span><span class="badge">MySQL</span><span class="badge">Docker</span><span class="badge">PHPUnit</span><span class="badge">OpenAPI 3.0</span><span class="badge">JavaScript</span><span class="badge">Tailwind CSS</span></div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Liya66/mathdeck" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg> GitHub</a><span class="btn" aria-disabled="true" title="Live link coming soon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg> Live site · coming soon</span>
+        </div>
+        <dl class="facts">
+          <div><dt>Role</dt><dd>Sole developer</dd></div>
+          <div><dt>Tests</dt><dd>285 tests · 85% coverage gate</dd></div>
+          <div><dt>Mutation score</dt><dd>76% → 90% MSI</dd></div>
+          <div><dt>Stack</dt><dd>PHP-FPM · Nginx · MySQL</dd></div>
+        </dl>
+      </header>
+
+      <section class="block">
+        <h2>Overview</h2>
+        <div class="prose"><p>MathDeck is a classroom card game: each player holds number and operator cards and
+builds an equation that reaches the target on the board. Underneath it is a
+<strong>server-authoritative rules engine</strong>, so the client sends only what the player
+intends to do, and the server decides what actually happened.</p>
+<p>The design rests on one idea: <code>handle(State, Command) → Event[]</code> is a pure function,
+and <code>State</code> is a fold over the event log. That single decision gives
+determinism, server authority, built-in telemetry and table-driven tests, and it
+lets three browser apps (the game, a deck editor and a teacher dashboard) share
+one source of truth.</p></div>
+      </section>
+      <section class="block">
+        <h2>Architecture</h2>
+        <p class="note">Dependencies point inwards. The pure engine depends on nothing, and <code>deptrac</code> fails the build if that ever changes.</p>
+        <div class="mindmap-frame">
+          <pre class="mermaid-src" hidden>mindmap
+  root((MathDeck))
+    Browser clients
+      Game · plain ES modules
+      Deck editor
+      Teacher dashboard
+    HTTP layer
+      REST API · OpenAPI 3.0
+      Signed bearer tokens
+      Idempotency keys
+      problem+json errors
+    Domain layers
+      Application · load, decide, append, retry
+      Authoring · schema, balance linter, versions
+      Analytics · projector and reports
+      Identity · accounts and pseudonyms
+    Pure engine
+      handle State + Command → Events
+      Exact rational arithmetic
+      Seeded deterministic shuffle
+    Infrastructure
+      MySQL event store
+      Analytics worker
+      Docker Compose</pre>
+          <div class="mindmap" role="img" aria-label="Architecture mindmap of MathDeck"></div>
+        </div>
+      </section>
+      <section class="block" data-lightbox>
+        <h2>Key features</h2>
+        <article class="feature has-image">
+          <div class="feature-text">
+            <h3>Play is decided on the server</h3>
+            <div class="prose"><p>Commands carry intent (<code>PlayCards{cardIds}</code>), never a score or a result, so a
+tampered client has nothing to forge. The browser shows a live preview of the
+equation, but it's clearly marked <em>"preview; the server decides"</em>.</p>
+<p>Arithmetic uses exact fractions throughout. With floating point,
+<code>1 ÷ 3 × 7 × 3</code> evaluates to <code>6.999999999999999</code>, and a child who answered
+correctly would be told they were wrong.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/mathdeck/game-full.webp" aria-label="Enlarge: MathDeck game screen with a target of 15, the player&#x27;s hand and a match log showing a rejected attempt">
+              <img class="framed" src="/images/projects/mathdeck/game.webp" width="1600" height="1127" alt="MathDeck game screen with a target of 15, the player&#x27;s hand and a match log showing a rejected attempt" loading="lazy">
+            </button>
+            <figcaption>A rejected attempt: the preview is labelled as a preview, and the server&#x27;s verdict appears in the match log.</figcaption>
+          </figure>
+        </article>
+        <article class="feature has-image flip">
+          <div class="feature-text">
+            <h3>Mistakes are recorded as teaching data</h3>
+            <div class="prose"><p>Each rejection carries a reason code designed for teaching, such as <code>OFF_BY_ONE</code>
+or <code>OPERATOR_PRECEDENCE_IGNORED</code>. The second one fires only when the
+learner's answer matches a left-to-right reading but not the correct one.</p>
+<p>A worker projects the event log into the teacher dashboard: overall accuracy,
+where learners go wrong, how long attempts take (median and 90th percentile,
+measured on the server) and a per-learner table. Analytics stores pseudonyms,
+not names.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/mathdeck/dashboard-full.webp" aria-label="Enlarge: Class dashboard showing accuracy, a bar chart of mistake types, a latency dumbbell chart and a per-learner table">
+              <img class="framed" src="/images/projects/mathdeck/dashboard.webp" width="1600" height="1124" alt="Class dashboard showing accuracy, a bar chart of mistake types, a latency dumbbell chart and a per-learner table" loading="lazy">
+            </button>
+            <figcaption>Class dashboard, built from simulated demo matches between four seeded learners.</figcaption>
+          </figure>
+        </article>
+        <article class="feature has-image">
+          <div class="feature-text">
+            <h3>Decks are data, checked before they ship</h3>
+            <div class="prose"><p>Teachers write new decks (numbers, operations, targets, hand size) without
+any code change. Each deck is validated against a JSON Schema.</p>
+<p>A valid deck can still be impossible to play, so publishing runs a
+<strong>solvability linter</strong> that searches for an expression reaching each target.
+An unreachable target blocks publishing. Published decks are frozen, and an edit
+forks a new version, so finished matches always replay exactly as they were played.</p></div>
+          </div>
+          <figure>
+            <button type="button" data-full="/images/projects/mathdeck/editor-full.webp" aria-label="Enlarge: Deck editor with numbers, operations, targets and a check panel showing every target as reachable">
+              <img class="framed" src="/images/projects/mathdeck/editor.webp" width="1600" height="1125" alt="Deck editor with numbers, operations, targets and a check panel showing every target as reachable" loading="lazy">
+            </button>
+            <figcaption>Deck editor: a forked draft of the starter deck, linted live against the server.</figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="block prose">
+<h2>Engineering notes</h2>
+<h3>Persistence without stored state</h3>
+<p>No game state is stored anywhere. A match is fully described by its seed record plus
+its event log, so there's no serialised state to version or migrate. The primary
+key on <code>(match_id, seq)</code> <em>is</em> the concurrency control: two writers racing for the
+same sequence number can't both succeed, and the loser reloads and decides again.</p>
+<h3>Retries are safe</h3>
+<p><code>Idempotency-Key</code> is required on every command and is written in the same transaction
+as the events it produced. A retry over flaky school wifi returns the original events
+instead of playing the cards twice.</p>
+<h3>Hardening</h3>
+<ul>
+<li>HMAC-signed, expiring tokens with the role as a signed claim. Sign-in failures are indistinguishable, so the API can't reveal which children have accounts.</li>
+<li>Mutation testing with Infection on the arithmetic, rules and analytics. It raised the mutation score from 76% to 90% and found a helper that was not only untested but wrong.</li>
+<li>CI runs static analysis (PHPStan), architecture rules (deptrac), both test suites against real MySQL, the browser-client tests and mutation testing.</li>
+<li>The external API contract is an OpenAPI 3.0 spec, and the Postman collection is generated from it rather than written by hand.</li>
+</ul>
+      </section>
+
+      <nav class="pager" aria-label="More projects">
+        <span></span>
+        <a href="/projects/mern-photo-app/">MERN Photo-Sharing App <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 5.3a1 1 0 0 0 0 1.4l4.3 4.3H4a1 1 0 1 0 0 2h13.7l-4.3 4.3a1 1 0 1 0 1.4 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.4 0z"/></svg></a>
+      </nav>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <img src="/fav.png?v=2" alt="Red panda logo" width="40" height="40">
+    <p>&copy; <span data-year>2026</span> All rights reserved</p>
+    <p><a href="/">Liya Wang</a></p>
+  </footer>
+
+  <script src="/js/main.js?v=2"></script>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    // Warm palette to match the site; light nodes read well on both the light and dark panel.
+    const warm = ["#f6c9b8", "#f5ddb0", "#e3c6d6", "#d9e3c4", "#f2b9a3", "#e8d3c0", "#d6cfe6", "#f0c4c4"];
+    const vars = { primaryColor: "#fdf6f3", primaryTextColor: "#290116", primaryBorderColor: "#bf3e1a", lineColor: "#8d4c47", fontFamily: "Alata, sans-serif" };
+    warm.forEach((c, i) => { vars["cScale" + i] = c; vars["cScaleLabel" + i] = "#290116"; });
+    mermaid.initialize({ startOnLoad: false, theme: "base", themeVariables: vars, mindmap: { padding: 14 } });
+    const src = document.querySelector(".mermaid-src").textContent;
+    const { svg } = await mermaid.render("mindmap-svg", src);
+    document.querySelector(".mindmap").innerHTML = svg;
+  </script>
+
+</body>
+</html>
